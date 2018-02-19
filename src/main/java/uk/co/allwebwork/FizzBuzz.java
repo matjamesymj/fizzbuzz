@@ -1,6 +1,27 @@
 package uk.co.allwebwork;
 
+import java.util.ArrayList;
+
 public class FizzBuzz {
+
+    public ArrayList<String> doFizzBuzzLoop(Integer howHighToGo){
+        ArrayList<String> returnArray = new ArrayList<String>();
+        for (int i = 1; i <= howHighToGo; i++) {
+            if(isMultipleOfThreeAndFive(i)){
+                returnArray.add(getTextForNumber(i));
+            }
+            else if(isMultipleOfThree(i)){
+                returnArray.add(getTextForNumber(i));
+            }else if(isMultipleOfFive(i))
+            {
+                returnArray.add(getTextForNumber(i));
+            }else{
+                returnArray.add(getTextForNumber(i));
+            }
+
+        }
+        return returnArray;
+    }
 
     public Boolean isMultipleOfThreeAndFive(Integer number){
         return isMultipleOfThree(number) && isMultipleOfFive(number);

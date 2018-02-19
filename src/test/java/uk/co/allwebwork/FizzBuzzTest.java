@@ -2,7 +2,22 @@ package uk.co.allwebwork;
 
 import junit.framework.TestCase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FizzBuzzTest extends TestCase {
+    public void testDoFizzBuzzLoop() throws Exception {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        List<String> expectedValue = new ArrayList<String>();
+        expectedValue.add("1");
+        expectedValue.add("2");
+        expectedValue.add("Fizz");
+        expectedValue.add("4");
+        expectedValue.add("Buzz");
+        List<String> fizzBuxxArray = fizzBuzz.doFizzBuzzLoop(5);
+       assertEquals(expectedValue,fizzBuxxArray);
+    }
+
     public void testGetTextForNumber() throws Exception {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertTrue(fizzBuzz.getTextForNumber(5).equals("Buzz"));
